@@ -117,7 +117,7 @@ const RegisterScreen = () => {
           {picMessage && (
             <ErrorMessage variant="danger">{picMessage}</ErrorMessage>
           )}
-          <Form.Group controlId="pic">
+          <Form.Group controlId="formFile">
             <Form.Label>Profile Picture</Form.Label>
             <Form.Control
               onChange={(e) => postDetails(e.target.files[0])}

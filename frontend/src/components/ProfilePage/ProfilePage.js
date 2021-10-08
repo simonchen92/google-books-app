@@ -57,6 +57,7 @@ const ProfilePage = () => {
       })
         .then((res) => res.json())
         .then((data) => {
+          console.log('data', data)
           setPic(data.url.toString());
         })
         .catch((err) => {
@@ -126,7 +127,7 @@ const ProfilePage = () => {
               {picMessage && (
                 <ErrorMessage variant="danger">{picMessage}</ErrorMessage>
               )}
-              <Form.Group controlId="pic">
+              <Form.Group controlId="formFile">
                 <Form.Label>Change Profile Picture</Form.Label>
                 <Form.Control
                   onChange={(e) => postDetails(e.target.files[0])}
